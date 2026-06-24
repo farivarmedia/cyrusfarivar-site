@@ -1284,9 +1284,9 @@ address.contact-details {
   </main>
 
   <footer>
-    <p>© 2026 Cyrus Farivar.</p>
+    <p>© 2026 Cyrus Farivar. 🖖</p>
   
-    <p class="last-updated">Last updated: <span id="last-updated"></span></p>
+    <p class="last-updated">Last updated: <span id="last-updated">June 23, 2026</span></p>
   </footer>
 
 <script>
@@ -1320,37 +1320,6 @@ address.contact-details {
     }());
 
 
-    (function () {
-      const lastUpdated = document.getElementById("lastUpdated");
-      if (!lastUpdated) return;
-
-      const modified = new Date(document.lastModified);
-      if (Number.isNaN(modified.getTime())) {
-        lastUpdated.textContent = "June 9, 2026";
-        return;
-      }
-
-      lastUpdated.textContent = modified.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-      });
-    }());
-  </script>
-
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const updated = new Date(document.lastModified);
-      const target = document.getElementById("last-updated");
-      if (target) {
-        target.textContent = updated.toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric"
-        });
-      }
-    });
   </script>
 
 
