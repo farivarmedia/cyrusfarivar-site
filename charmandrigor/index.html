@@ -543,7 +543,9 @@
 
     const fitContainer = document.querySelector(".hero .wrap");
     function fitToWidth(maxTotal){
-      const available = fitContainer.getBoundingClientRect().width;
+      const cs = getComputedStyle(fitContainer);
+      const available = fitContainer.getBoundingClientRect().width
+        - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
       const scale = Math.min(1, available / maxTotal);
       stage.style.transform = `scale(${scale})`;
     }
